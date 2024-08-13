@@ -1,6 +1,6 @@
 ---
 title: "Performance of dual and triple fungicide premixes for the control of soybean target spot after seven years"
-author: "Evandro Puhl de Melo | Ricardo Gomes Tomáz | Cláudia Vieira Godoy | Emerson Medeiros Del Ponte."
+author: Evandro Puhl de Melo | Ricardo Gomes Tomáz | Cláudia Vieira Godoy | Emerson Medeiros Del Ponte.
 format: 
   html:
     code-fold: false
