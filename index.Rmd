@@ -17,10 +17,10 @@ theme: "cosmo"
 toc: true
 toc-location: right
 toc-depth: 10
-fontcolor: "#B06500" # {html} Color of text.
+fontcolor: "black" # {html} Color of text.
 linkcolor: "#007FFF" # {html, pdf, beamer} Color of link text.
 reference-location: "margin"
-colortheme: "#B06500"
+colortheme: "black"
 highlight: monochrome
 warning: false
 cache: true
