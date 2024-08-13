@@ -211,6 +211,7 @@ ma3$ai <- revalue(ma3$ai, c("BIX+PROT+TRIFL" = "BIX + PROT + TRIFL"))
 ma3$ai <- revalue(ma3$ai, c("FLUX+PYRA" = "FLUX + PYRA"))
 
 ma3$study = as.factor(ma3$study)
+unique(ma3$study)
 ```
 
 ```{r}
