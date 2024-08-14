@@ -242,7 +242,7 @@ ma_check = ma_check %>%
   filter(!is.na(v_sev_check))
 
 
-ma_check = ma_check %>% # REVISAR
+ma_check = ma_check %>%
  dplyr::group_by(study) %>% 
   dplyr::summarise(
     yld_check = mean(yld_check),
@@ -676,7 +676,3 @@ plot_grid(plot_sev,plot_yld, ncol = 1, labels = c("AUTO"))
 ggsave("fig/decline_efficacy_sev_yld.png", width = 8, height = 10, dpi = 600, bg = "white")
 
 ```
-
-
-
-
