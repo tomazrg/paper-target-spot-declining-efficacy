@@ -43,7 +43,7 @@ library(cowplot)
 
 ```{r}
 
-ma <- read_xlsx("data/ts.xlsx")
+ma <- gsheet2tbl("https://docs.google.com/spreadsheets/d/151DE26uSMN4WBS0PTQcjdw7BO56gXy_VilFZS3b9AAM/edit?usp=sharing")
 head(ma)
 ```
 
