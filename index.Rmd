@@ -42,7 +42,8 @@ library(cowplot)
 ```
 
 ```{r}
-ma <- gsheet2tbl("https://docs.google.com/spreadsheets/d/151DE26uSMN4WBS0PTQcjdw7BO56gXy_VilFZS3b9AAM/edit?usp=sharing")
+
+ma <- read_xlsx("data/ts.xlsx")
 head(ma)
 ```
 
@@ -672,7 +673,7 @@ plot_yld
 ```
 
 ```{r}
-plot_grid(plot_sev,plot_yld, ncol = 1, labels = c("AUTO"))
+plot_grid(plot_sev,plot_yld, ncol = 1, labels = c("auto"))
 ggsave("fig/decline_efficacy_sev_yld.png", width = 8, height = 10, dpi = 600, bg = "white")
 
 ```
