@@ -42,8 +42,7 @@ library(cowplot)
 ```
 
 ```{r}
-
-ma <- gsheet2tbl("https://docs.google.com/spreadsheets/d/151DE26uSMN4WBS0PTQcjdw7BO56gXy_VilFZS3b9AAM/edit?usp=sharing")
+ma = import("https://raw.githubusercontent.com/tomazrg/paper-target-spot-declining-efficacy/main/data/tss.csv")
 head(ma)
 ```
 
