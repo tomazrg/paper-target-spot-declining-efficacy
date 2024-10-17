@@ -39,6 +39,7 @@ library(plyr)
 library(janitor)
 library(metafor)
 library(cowplot)
+library(rio)
 ```
 
 ```{r}
@@ -51,11 +52,14 @@ head(ma)
 ## Yield
 
 ```{r}
+
+labels <- c("BIX+PROT+TRIFL" = "BIX+PROT+TRIFL", "_CHECK" = "Non-treated", "FLUX+PYRA" = "FLUX+PYRA")
+
 yield = ma %>% 
   filter(ai %in% c("BIX+PROT+TRIFL", "_CHECK", "FLUX+PYRA")) %>% 
   ggplot(aes(yld))+
   geom_histogram(color = "white", fill = "darkred")+
-  facet_wrap(~ai)+
+  facet_wrap(~ai,labeller = labeller(ai = labels))+
   theme_few()+
   labs(x = "Yield (kg/ha)",
        y = "Frequency")+
@@ -73,7 +77,7 @@ yield_year = ma %>%
   ggplot(aes(as.factor(year),yld))+
   #geom_histogram(color = "white", fill = "darkgreen")+
   geom_boxplot(fill = NA, color = "black", size = 1)+
-  facet_wrap(~ai)+
+  facet_wrap(~ai,labeller = labeller(ai = labels))+
   theme_few()+
   labs(x = "Year",
        y = "Yield (kg/ha)")+
@@ -98,7 +102,7 @@ severity = ma %>%
   filter(ai %in% c("BIX+PROT+TRIFL", "_CHECK", "FLUX+PYRA")) %>% 
   ggplot(aes(sev))+
   geom_histogram(color = "white", fill = "darkgreen")+
-  facet_wrap(~ai)+
+  facet_wrap(~ai,labeller = labeller(ai = labels))+
   theme_few()+
   labs(x = "Severity (%)",
        y = "Frequency")+
@@ -115,7 +119,7 @@ severity_year = ma %>%
   ggplot(aes(as.factor(year),sev))+
   #geom_histogram(color = "white", fill = "darkgreen")+
   geom_boxplot(fill = NA, color = "black", size = 1)+
-  facet_wrap(~ai)+
+  facet_wrap(~ai,labeller = labeller(ai = labels))+
   theme_few()+
   labs(x = "Year",
        y = "Severity (%)")+
