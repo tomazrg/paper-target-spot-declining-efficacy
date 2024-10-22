@@ -222,7 +222,7 @@ unique(ma3$study)
 #ma3_unique <- ma3 %>%
  # dplyr::distinct(study, .keep_all = TRUE)
 
-ma3 = ma3 %>% # REVISAR
+ma3 = ma3 %>% 
  dplyr::group_by(ai,study,year) %>% 
   dplyr::summarise(
     mean_yld = mean(mean_yld),
